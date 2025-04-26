@@ -151,7 +151,7 @@ function serveRegistrationForm() {
     </head>
     <body>
       <div class="container">
-        <h2>ChatGPT University 邮箱注册</h2>
+        <h2>KTSU 邮箱注册</h2>
         <form method="POST">
           <label for="firstName">名字:</label>
           <input type="text" id="firstName" name="firstName" required>
