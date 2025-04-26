@@ -25,7 +25,7 @@ function serveRegistrationForm() {
   <!DOCTYPE html>
   <html>
     <head>
-      <title>Spark University 邮箱注册</title>
+      <title>KTSU University 邮箱注册</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 适配移动端的视口设置 -->
       <!-- 引入 Cloudflare Turnstile 的脚本 -->
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -151,7 +151,7 @@ function serveRegistrationForm() {
     </head>
     <body>
       <div class="container">
-        <h2>Saprk University 邮箱注册</h2>
+        <h2>KTSU University 邮箱注册</h2>
         <form method="POST">
           <label for="firstName">名字:</label>
           <input type="text" id="firstName" name="firstName" required>
