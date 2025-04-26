@@ -20,12 +20,12 @@ async function handleRequest(request) {
  * 提供注册表单的 HTML，并集成 Cloudflare Turnstile 验证码
  */
 function serveRegistrationForm() {
-  const emailDomain = EMAIL_DOMAIN || '@chatgpt.nyc.mn'
+  const emailDomain = EMAIL_DOMAIN || '@ktsu.edu.kg'
   const html = `
   <!DOCTYPE html>
   <html>
     <head>
-      <title>ChatGPT University 邮箱注册</title>
+      <title>Kyrgyzstan Tien Shan University 邮箱注册</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 适配移动端的视口设置 -->
       <!-- 引入 Cloudflare Turnstile 的脚本 -->
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -180,9 +180,6 @@ function serveRegistrationForm() {
 
           <input type="submit" value="注册">
         </form>
-        <div class="footer">
-          <p>访问我的个人网站: <a href="https://www.chatgpt.org.uk/" target="_blank">https://www.chatgpt.org.uk/</a></p>
-        </div>
       </div>
     </body>
   </html>
