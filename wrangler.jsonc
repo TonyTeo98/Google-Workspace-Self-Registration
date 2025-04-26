@@ -1,0 +1,5 @@
+{
+  "name": "google-workspace-self-registration",
+  "main": "worker.js",
+  "compatibility_date": "2025-04-26"
+}
