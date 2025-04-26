@@ -20,12 +20,12 @@ async function handleRequest(request) {
  * 提供注册表单的 HTML，并集成 Cloudflare Turnstile 验证码
  */
 function serveRegistrationForm() {
-  const emailDomain = EMAIL_DOMAIN || '@ktsu.edu.kg'
+  const emailDomain = EMAIL_DOMAIN
   const html = `
   <!DOCTYPE html>
   <html>
     <head>
-      <title>Kyrgyzstan Tien Shan University 邮箱注册</title>
+      <title>Spark University 邮箱注册</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 适配移动端的视口设置 -->
       <!-- 引入 Cloudflare Turnstile 的脚本 -->
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -151,7 +151,7 @@ function serveRegistrationForm() {
     </head>
     <body>
       <div class="container">
-        <h2>KTSU 邮箱注册</h2>
+        <h2>Saprk University 邮箱注册</h2>
         <form method="POST">
           <label for="firstName">名字:</label>
           <input type="text" id="firstName" name="firstName" required>
@@ -393,29 +393,13 @@ async function verifyTurnstile(token) {
   }
 }
 /**
- * 从 Workers 环境变量中获取秘密变量
+ * Worker 使用以下环境变量，确保在 Cloudflare 控制台中已配置：
+ * - GOOGLE_CLIENT_ID 
+ * - GOOGLE_CLIENT_SECRET
+ * - GOOGLE_REFRESH_TOKEN
+ * - GOOGLE_ADMIN_EMAIL
+ * - VERIFICATION_CODE
+ * - EMAIL_DOMAIN
+ * - TURNSTILE_SITE_KEY
+ * - TURNSTILE_SECRET_KEY
  */
-const GOOGLE_CLIENT_ID = GOOGLE_CLIENT_ID
-const GOOGLE_CLIENT_SECRET = GOOGLE_CLIENT_SECRET
-const GOOGLE_REFRESH_TOKEN = GOOGLE_REFRESH_TOKEN
-const GOOGLE_ADMIN_EMAIL = GOOGLE_ADMIN_EMAIL
-const VERIFICATION_CODE = VERIFICATION_CODE
-const EMAIL_DOMAIN = EMAIL_DOMAIN
-//const TURNSTILE_SITE_KEY = TURNSTILE_SITE_KEY
-//const TURNSTILE_SECRET_KEY = TURNSTILE_SECRET_KEY
-
-/**
-也可以不使用环境变量
-const GOOGLE_CLIENT_ID = ''
-const GOOGLE_CLIENT_SECRET = ''
-const GOOGLE_REFRESH_TOKEN = ''
-const GOOGLE_ADMIN_EMAIL = ''
-const VERIFICATION_CODE = ''
-const EMAIL_DOMAIN = ''
- */
-
-
-// Cloudflare Turnstile 的 Site Key 和 Secret Key
-const TURNSTILE_SITE_KEY = '0x4AAAAAABUM5qXNckkEMy6r' // 替换为你的 Turnstile Site Key
-const TURNSTILE_SECRET_KEY = '0x4AAAAAABUM5n9rlxb2ZumKGQC9M2kXhsE' // 替换为你的 Turnstile Secret Key
-
