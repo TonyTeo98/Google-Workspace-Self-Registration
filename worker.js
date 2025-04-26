@@ -416,6 +416,6 @@ const EMAIL_DOMAIN = ''
 
 
 // Cloudflare Turnstile 的 Site Key 和 Secret Key
-const TURNSTILE_SITE_KEY = 0x4AAAAAABUM5qXNckkEMy6r // 替换为你的 Turnstile Site Key
-const TURNSTILE_SECRET_KEY = 0x4AAAAAABUM5n9rlxb2ZumKGQC9M2kXhsE // 替换为你的 Turnstile Secret Key
+const TURNSTILE_SITE_KEY = '0x4AAAAAABUM5qXNckkEMy6r' // 替换为你的 Turnstile Site Key
+const TURNSTILE_SECRET_KEY = '0x4AAAAAABUM5n9rlxb2ZumKGQC9M2kXhsE' // 替换为你的 Turnstile Secret Key
 
