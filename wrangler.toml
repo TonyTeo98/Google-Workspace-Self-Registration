@@ -1,0 +1,14 @@
+# 这是您Worker的名称
+name = "google-workspace-self-registration"
+
+# 这是Worker的主入口文件
+main = "worker.js"
+
+# 兼容性日期
+compatibility_date = "2025-06-10"
+
+# --- 这是最关键的一步 ---
+# 在这里声明您的KV命名空间绑定
+[[kv_namespaces]]
+binding = "REG_DATA"
+id = "0240925589d24e9c98a4f1953ff2a2f9"
