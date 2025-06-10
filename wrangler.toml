@@ -11,4 +11,4 @@ compatibility_date = "2025-06-10"
 # 在这里声明您的KV命名空间绑定
 [[kv_namespaces]]
 binding = "REG_DATA"
-id = "0240925589d24e9c98a4f1953ff2a2f9"
+id = "请在这里粘贴您的KV命名空间ID"
